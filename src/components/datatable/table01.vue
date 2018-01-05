@@ -1,6 +1,6 @@
 <template>
 
-  <table id="table_id">
+  <table id="example" class="table table-striped table-bordered" cellspacing="0" >
 
     <thead>
     <tr>
@@ -40,36 +40,37 @@
       <td>$170,750</td>
     </tr>
     </tbody>
-
   </table>
-
 </template>
 
 <script>
 
   import $ from 'jquery';
-  import dt from 'datatables.net';
+  import dt from 'datatables.net-bs';
+
+  import 'bootstrap/dist/css/bootstrap.css';
+  import 'datatables.net-bs/css/dataTables.bootstrap.css';
 
 
-  $.Datatable = dt;
+  $.DataTable=dt
 
   export default {
     name: "table01",
     methods: {
-      init: function (aa) {
-        console.log(aa)
+      init: function (option) {
+
         $(document).ready(function () {
-          $('#table_id').DataTable();
+          $('#example').DataTable();
         });
+
       }
     }
   }
-  //@import url("https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css");
+
 </script>
 
 <style scoped>
 
-  @import  '../../assets/datatable/css/jquery.dataTables.min.kk.css';
 
 
 
