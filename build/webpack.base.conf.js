@@ -65,19 +65,6 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-      ,
-      {
-        test: /\.css$/,
-        use: [{
-          loader: "css-loader",
-          options:{
-            modules:false,
-            alias: {
-              "../": "../src/assets/datatable/css/jquery.dataTables.min.kk.css"
-            }
-          }
-        }]
-      }
 
     ]
   },
